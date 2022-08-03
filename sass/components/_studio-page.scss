@@ -1,0 +1,150 @@
+//criteria section
+.criteria__title--hidden {
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  width: 1px;
+}
+.subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.criteria__list {
+  display: flex;
+  gap: $card-set-gap;
+}
+.criteria-item {
+  flex-basis: calc((100%-#{$card-set-gap}* 3) / 4);
+}
+.criteria__desc {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+}
+.thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $light-bg-cl;
+  height: 120px;
+  margin-bottom: 30px;
+}
+.criteria__icon {
+  width: 70px;
+  height: 70px;
+}
+
+//WORK section
+
+.work {
+  padding-top: 0;
+  &__list {
+    display: flex;
+    gap: $card-set-gap;
+  }
+}
+.work__item {
+  position: relative;
+
+  flex-basis: calc((100%-#{$card-set-gap}* 2) / 3);
+}
+.work__subtitle {
+  color: #ffffff;
+}
+.work__thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+//TEAM section
+
+.team {
+  background-color: $light-bg-cl;
+  &__list {
+    display: flex;
+    gap: $card-set-gap;
+  }
+  &__item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+  &__text {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  &__desc {
+    margin-bottom: 16px;
+    line-height: calc(19 / 16);
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+}
+.team__subtitle {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $main-txt-cl;
+}
+
+//Clients
+
+.clients__list {
+  display: flex;
+  gap: $card-set-gap;
+
+  list-style: none;
+}
+
+.clients__item {
+  width: 170px;
+  height: 92px;
+}
+
+.clients__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid $social-cl;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    border: 1px solid $select-cl;
+  }
+}
+
+.clients__logo {
+  width: 106px;
+  height: 60px;
+  fill: $social-cl;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: $select-cl;
+  }
+}
