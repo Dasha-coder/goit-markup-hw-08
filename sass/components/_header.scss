@@ -29,8 +29,9 @@
 .main-navigation {
   margin-right: auto;
 
-  @media screen and (max-width: 480px) {
-    margin-bottom: auto;
+  @media screen and (max-width: 767px) {
+    // margin-bottom: auto;
+    margin-bottom: 306px;
   }
 }
 

@@ -64,10 +64,8 @@ ul {
 
 @mixin form-input($padding: 11px 12px 11px 42px) {
   display: block;
-  width: 370px;
-  @media screen and (min-width: 1200px) {
-    width: 448px;
-  }
+
+  width: 100%;
 
   padding: $padding;
   border-radius: 4px;
