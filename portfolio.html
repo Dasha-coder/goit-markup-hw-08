@@ -31,48 +31,61 @@
             <a href="/" class="logo header__logo link"> <span class="logo__part">Web</span>Studio </a>
 
 
-            <button type="button" class="mobile-menu__btn is-open" data-menu-button>
+            <button type="button" class="mobile-menu__btn is-open" aria-expanded="false" aria-controls="mobile-menu"
+                data-menu-button>
                 <svg class="mobile-menu__icon" width="40px" height="40px" aria-label="Перемикач мобільного меню">
                     <use href="./images/icons.svg#icon-close-menu" class="icon-close"></use>
                     <use href="./images/icons.svg#icon-open-menu" class="icon-open"></use>
                 </svg>
             </button>
 
-            <div class="mobile-menu menu">
+            <div class="mobile-menu menu is-open" id="mobile-menu" data-menu>
+
                 <nav class="main-navigation">
                     <ul class="main-navigation__list list">
                         <li class="main-navigation__item">
-                            <a class="main-navigation__link link " href="/">Студія</a>
+                            <a class="main-navigation__link link" href="/">Студія</a>
                         </li>
-                        <li class="main-navigation__item"><a
-                                class="main-navigation__link link main-navigation__link--current"
+                        <li class="main-navigation__item">
+                            <a class="main-navigation__link link main-navigation__link--current"
                                 href="./portfolio.html">Портфоліо</a>
                         </li>
-                        <li class="main-navigation__item"><a class="main-navigation__link link" href="">Контакти</a>
+                        <li class="main-navigation__item">
+                            <a class="main-navigation__link link" href="">Контакти</a>
                         </li>
                     </ul>
                 </nav>
 
                 <ul class="connection list">
-                    <li class="connection__item"><a class="connection__link link" href="tel:+380961111111">
+                    <li class="connection__item">
+                        <a class="connection__link link" href="tel:+380961111111">
                             <svg class="connection__icon icon-smartphone">
                                 <use href="./images/icons.svg#icon-smartphone"></use>
-                            </svg>+38 096 111 11 11</a>
+                            </svg>+38 096 111 11 11
+                        </a>
+                    </li>
 
-                    <li class="connection__item"><a class="connection__link link" href="mailto:info@devstudio.com">
+                    <li class="connection__item">
+                        <a class="connection__link link" href="mailto:info@devstudio.com">
                             <svg class="connection__icon icon-envelope">
                                 <use href="./images/icons.svg#icon-envelope"></use>
-                            </svg>info@devstudio.com</a></li>
+                            </svg>info@devstudio.com
+                        </a>
+                    </li>
                 </ul>
 
                 <ul class="header-sosial list">
-                    <li class="header-sosial__item" lang="en"><a href="" class="header-sosial__link link">Instagram</a>
+                    <li class="header-sosial__item" lang="en">
+                        <a href="" class="header-sosial__link link">Instagram</a>
                     </li>
-                    <li class="header-sosial__item" lang="en"><a href="" class="header-sosial__link link">Twitter</a>
+                    <li class="header-sosial__item" lang="en">
+                        <a href="" class="header-sosial__link link">Twitter</a>
                     </li>
-                    <li class="header-sosial__item" lang="en"><a href="" class="header-sosial__link link">Facebook</a>
+                    <li class="header-sosial__item" lang="en">
+                        <a href="" class="header-sosial__link link">Facebook</a>
                     </li>
-                    <li class="header-sosial__item" lang="en"><a href="" class="header-sosial__link link">LinkedIn</a>
+                    <li class="header-sosial__item" lang="en">
+                        <a href="" class="header-sosial__link link">LinkedIn</a>
                     </li>
                 </ul>
             </div>
@@ -113,7 +126,7 @@
                                         відомості про компанію чи приватну особу.</p>
                                 </div>
                             </div>
-                            <div class="card__content">
+                            <div class="card__content card__content--padding">
                                 <h2 class="card__subtitle">Технокряк</h2>
                                 <p class="card__desc">Веб-сайт</p>
                             </div>
@@ -350,7 +363,7 @@
     </footer>
 
 
-
+    <script src="./js/mobile-menu.js"></script>
 
 </body>
 
