@@ -2,7 +2,7 @@
   display: inline-flex;
   border: none;
   background-color: transparent;
-  z-index: 5;
+  z-index: 11;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -22,23 +22,35 @@
   display: none;
 }
 .mobile-menu {
-  /* display: none; */
-  @media screen and (max-width: 767px) {
-    position: absolute;
+  display: flex;
+  @media screen and (max-width: 480px) {
+    display: none;
+
+    position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100vh;
 
-    padding: 48px 83px 48px 40px;
+    flex-direction: column;
+
+    z-index: 10;
+
+    padding: 48px 40px;
+
     background-color: #ffffff;
+
+    &.is-open {
+      display: flex;
+    }
   }
   @media screen and (min-width: 768px) {
-    display: flex;
     flex-basis: 100%;
     align-items: center;
   }
 }
 .header-sosial {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 481px) {
     display: none;
   }
   display: flex;
