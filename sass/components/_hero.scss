@@ -1,195 +1,241 @@
 .hero {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+
+  background-color: #c4c4c4;
+  background-repeat: no-repeat;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: 480px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/background/mobile-bg-hero.jpg);
+
+    max-width: 100vw;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/background/mobile-bg-hero@2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 100vw;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/background/tablet-bg-hero.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/background/tablet-bg-hero@2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
     padding-top: 200px;
     padding-bottom: 200px;
-    text-align: center;
 
-    background-color: #C4C4C4;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background/bg-hero.jpg);
-    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/background/bg-hero.jpg);
+
     max-width: 1600px;
-    margin-right: auto;
-    margin-left: auto;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/background/bg-hero@2x.jpg');
+    }
+  }
 }
 
 .headline {
+  max-width: 360px;
+
+  @media screen and (min-width: 1200px) {
     width: 696px;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
+  }
 
-    font-weight: 900;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-weight: 900;
+  font-size: 26px;
+  line-height: calc(42 / 26);
+
+  @media screen and (min-width: 1200px) {
     font-size: 44px;
-    line-height: 60px;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #FFFFFF;
+    line-height: calc(60 / 44);
+  }
 
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
 }
+
 //Modal window
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.3) rotate(360deg);
-
+  transform: translate(-50%, -50%) scale(0.3) rotate(360deg);
 }
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1) rotate(0);
-    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1) rotate(0);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 
+  width: 450px;
+  height: 609px;
+
+  @media screen and (min-width: 1200px) {
     width: 528px;
     height: 581px;
-    background: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+  }
 
-    padding: 40px 39px 40px 41px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 
-    &__desc {
-            font-weight: 700;
-            font-size: 20px;
-            line-height: calc(23/20);
-            letter-spacing: 0.03em;
-    
-            color: $main-txt-cl;
-            margin-bottom: 12px;
-        }
+  padding: 40px;
+
+  &__desc {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    letter-spacing: 0.03em;
+
+    color: $main-txt-cl;
+    margin-bottom: 12px;
+  }
 }
 .modal__btn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 30px;
-    height: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    &:hover .modal__icon,
-    &:focus .modal__icon {
-            fill: $select-cl;
-        }
+  &:hover .modal__icon,
+  &:focus .modal__icon {
+    fill: $select-cl;
+  }
 }
 
 .modal__icon {
-    width: 18px;
-    height: 18px;
+  width: 18px;
+  height: 18px;
 }
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .form__label {
-    position: relative;
+  position: relative;
 
-    display: inline-block;
-    margin-bottom: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
 
-    font-size: 12px;
-    line-height: calc(14/12);
-    letter-spacing: 0.01em;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
 
-    color: $accent-txt-cl;
+  color: $accent-txt-cl;
 }
 .form__input {
-    @include form-input ($padding: 11px 12px 11px 42px) ;
-    
-   
-    &:hover,
-    &:focus {
-        cursor: pointer;
-            border-color: $select-cl;
-            fill: $select-cl;
-    }
+  @include form-input($padding: 11px 12px 11px 42px);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    border-color: $select-cl;
+    fill: $select-cl;
+  }
 }
 .form__icon {
-    
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  pointer-events: none;
 
-    width: 18px;
-    height: 18px;
+  width: 18px;
+  height: 18px;
 
-    fill: $main-txt-cl;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: $main-txt-cl;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    .form__input:hover + &,
-    .form__input:focus + & {
-        fill: $select-cl;
-    }
+  .form__input:hover + &,
+  .form__input:focus + & {
+    fill: $select-cl;
+  }
 }
 
 .textarea {
-    @extend .form__input;
-    height: 138px;
+  @extend .form__input;
+  height: 138px;
 
-    padding: 12px 16px;
-    margin-bottom: 20px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
 
-    resize: none;
-    outline: transparent;
+  resize: none;
+  outline: transparent;
 }
 .agreement {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 
-    font-size: 14px;
-    line-height: calc(24/14);
-    letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
 
-    color: $accent-txt-cl;
-    &__link {
-            color: $select-cl;
-        }
-        &__checkbox {
-            appearance: none;
-        }
-        
+  color: $accent-txt-cl;
+  &__link {
+    color: $select-cl;
+  }
+  &__checkbox {
+    appearance: none;
+  }
 }
 .agreement__icon {
-        width: 16px;
-        height: 15px;
+  width: 16px;
+  height: 15px;
 
-        fill: #FFFFFF;
-        border: 1px solid $main-txt-cl;
-        border-radius: 2px;
-        transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #ffffff;
+  border: 1px solid $main-txt-cl;
+  border-radius: 2px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-            .agreement__checkbox:checked + & {
-background-color: $select-cl;
+  .agreement__checkbox:checked + & {
+    background-color: $select-cl;
     border: none;
-            }
-    }
+  }
+}

@@ -13,13 +13,30 @@
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.criteria__subtitle {
+  color: $main-txt-cl;
 }
 .criteria__list {
-  display: flex;
-  gap: $card-set-gap;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $card-set-gap;
+  }
 }
-.criteria-item {
-  flex-basis: calc((100%-#{$card-set-gap}* 3) / 4);
+.criteria__item {
+  @media screen and (min-width: 768px) {
+    justify-content: space-around;
+    flex-basis: calc((100% - #{$card-set-gap}) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - #{$card-set-gap} * 3) / 4);
+  }
 }
 .criteria__desc {
   margin-top: 10px;
@@ -43,6 +60,9 @@
 //WORK section
 
 .work {
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
   padding-top: 0;
   &__list {
     display: flex;
@@ -77,8 +97,18 @@
   background-color: $light-bg-cl;
   &__list {
     display: flex;
+    flex-direction: column;
     gap: $card-set-gap;
   }
+
+  @media screen and (min-width: 768px) {
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
   &__item {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -88,11 +118,29 @@
     padding-top: 30px;
     padding-bottom: 30px;
   }
+  @media screen and (max-width: 768px) {
+    padding-bottom: 24px;
+  }
+
   &__desc {
     margin-bottom: 16px;
     line-height: calc(19 / 16);
     text-align: center;
     letter-spacing: 0.03em;
+  }
+}
+
+.team__img {
+  max-width: 450px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 354px;
+    max-height: 374px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+    height: 260px;
   }
 }
 .team__subtitle {
@@ -111,13 +159,28 @@
 
 .clients__list {
   display: flex;
+  flex-wrap: wrap;
   gap: $card-set-gap;
 
   list-style: none;
+
+  @media screen and (max-width: 1200px) {
+    justify-content: center;
+  }
 }
 
 .clients__item {
-  width: 170px;
+  @media screen and (min-width: 480px) {
+    width: 210px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
+
   height: 92px;
 }
 

@@ -1,22 +1,29 @@
-@mixin logo ($color)
-{
-    font-family: $secondary-font;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    color: $color;
-
+@mixin logo($color) {
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $color;
 }
 .logo {
-    @include logo (#000000);
-    &__part {
-color: $select-cl;
+  @include logo(#000000);
+  &__part {
+    color: $select-cl;
+  }
+  .header & {
+    margin-right: auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @media screen and (min-width: 768px) {
+      margin-right: 90px;
     }
-        .header & {
-            margin-right: 93px;
-        }
+  }
 }
 .footer__logo {
-    @include logo (#FFFFFF);
+  @include logo(#ffffff);
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
