@@ -9,7 +9,7 @@
 
   @media screen and (max-width: 480px) {
     justify-content: space-between;
-    max-width: 480px;
+    //max-width: 480px;
   }
 }
 
@@ -30,14 +30,14 @@
   margin-right: auto;
 
   @media screen and (max-width: 767px) {
-    // margin-bottom: auto;
-    margin-bottom: 306px;
+    margin-bottom: auto;
   }
 }
 
 .connection {
   @media screen and (max-width: 767px) {
     margin-bottom: 64px;
+    margin-top: 64px;
   }
   @media screen and(min-width:768px) {
     display: flex;

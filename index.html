@@ -30,15 +30,17 @@
             <a href="/" class="logo header__logo link"> <span class="logo__part">Web</span>Studio </a>
 
 
-            <button type="button" class="mobile-menu__btn is-open" aria-expanded="false" aria-controls="mobile-menu"
+            <button type="button" class="mobile-menu__btn" aria-expanded="false" aria-controls="mobile-menu"
                 data-menu-button>
                 <svg class="mobile-menu__icon" width="40px" height="40px" aria-label="Перемикач мобільного меню">
-                    <use href="./images/icons.svg#icon-close-menu" class="icon-close"></use>
+
                     <use href="./images/icons.svg#icon-open-menu" class="icon-open"></use>
+                    <use href="./images/icons.svg#icon-close-menu" class="icon-close"></use>
+
                 </svg>
             </button>
 
-            <div class="mobile-menu menu is-open" id="mobile-menu" data-menu>
+            <div class="mobile-menu menu" id="mobile-menu" data-menu>
 
                 <nav class="main-navigation">
                     <ul class="main-navigation__list list">
@@ -93,7 +95,7 @@
 
     <main>
         <!-- Hero section -->
-        <section class="hero section">
+        <section class="hero">
             <h1 class="headline">Ефективні рішення для вашого бізнесу</h1>
             <button class=" button hero__button" type="button" data-modal-open>Замовити послугу</button>
 
